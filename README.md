@@ -5,15 +5,17 @@ Adapted from https://github.com/defeo/jupyterhub-docker (original notes below).
 Main changes from original:
 
 - Unversioned Hub + Lab containers (i.e. use updated containers).
-- Set Lab to dummy auth method (use for local testing only!).
-- Added Lab container version with [ePSproc](https://github.com/phockett/ePSproc) (see `docker-compose.ePSproc.yml` and `/jupyterlab-ePSproc`), currently set for dev branch.
+- Set Hub to dummy auth method (use for local testing only!). See `/jupyterhub/jupyterhub_config.py`.
+- Added Lab container version with [ePSproc](https://github.com/phockett/ePSproc) (see `docker-compose.ePSproc.yml` and `/jupyterlab-ePSproc` for details), currently set for dev branch.
 - Added basic env test notebook.
 - Set docker volume paths for local Synology machine (see `docker-compose*`).
 
 Lab container currently uses Jupyter Stacks scipy notebook as base, https://github.com/jupyter/docker-stacks/tree/master/scipy-notebook
 
+Run with `docker-compose up` for default version, or `docker-compose -f docker-compose.ePSproc.yml up` for ePSproc version.
 
 ---
+[Original readme follows]
 
 # JupyterHub deployment in use at Université de Versailles
 
