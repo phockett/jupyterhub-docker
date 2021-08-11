@@ -12,8 +12,18 @@ defaultEntryPoints = ["https","http"]
   address = ":443"
     [entryPoints.https.tls]
       [[entryPoints.https.tls.certificates]]
-      certFile = "/etc/certs/jupyter_ens_uvsq_fr.crt"
-      keyFile = "/etc/certs/jupyter.ens.uvsq.fr.key"
+      certFile = "/etc/certs/server.crt"
+      keyFile = "/etc/certs/server.key"
+
+## Dynamic configuration
+# Testing from https://doc.traefik.io/traefik/routing/routers/
+# THIS ALMOST works, but redirs to /hub/jupyter
+# [http]
+#   [routers]
+#     [my-router]
+#       rule="Path(`/jupyter`)"
+#       service="jupyterhub"
+
 
 [docker]
 domain = "docker.local"
