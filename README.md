@@ -12,7 +12,11 @@ Main changes from original:
 
 Lab container currently uses Jupyter Stacks scipy notebook as base, https://github.com/jupyter/docker-stacks/tree/master/scipy-notebook
 
-Run with `docker-compose up` for default version, or `docker-compose -f docker-compose.ePSproc.yml up` for ePSproc version.
+Run with
+  ```docker-compose up```
+for default version, or
+  ```docker-compose -f docker-compose.ePSproc.yml up```
+for ePSproc version.
 
 ---
 [Original readme follows]
